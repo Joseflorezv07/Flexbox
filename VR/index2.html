@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+  <body>
+      <script>
+          function show (id){
+          var valor = $('#'+id).attr("alt");
+          document.getElementById('cielo').setAttribute('src','#' + id);
+          $('#descripcion').attr("value", "Conoce " + valor);
+        }
+      </script>
+    <a-scene>
+            <a-assets>
+            <img id="a1" alt="Bogota" src="bogota.jpg"/>
+            <img id="a2" alt="Canada" src="canada.jpg"/>
+            <img id="a3" alt="VillaDeLeyva" src="villa.jpg"/>
+            </a-assets>
+            <a-sky src="#a3" id="cielo"></a-sky>
+            <a-camera>
+                <a-cursor color="white"></a-cursor>
+            </a-camera>
+    </a-scene>
+    <a-image src="#a2" onclick="show(event)"></a-image>
+    <a-image src="#a3" onclick="show(event)"></a-image>
+  </body>
+</html>
