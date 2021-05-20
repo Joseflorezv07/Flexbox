@@ -15,18 +15,18 @@
           $('#descripcion').attr("value", "Conoce " + valor);
         }
       </script>
+       <a-assets>
+        <img id="a1" alt="Bogota" src="./bogota.jpg"/>
+        <img id="a2" alt="Canada" src="./canada.jpg"/>
+        <img id="a3" alt="VillaDeLeyva" src="./villa.jpg"/>
+        </a-assets>
     <a-scene>
-            <a-assets>
-            <img id="a1" alt="Bogota" src="bogota.jpg"/>
-            <img id="a2" alt="Canada" src="canada.jpg"/>
-            <img id="a3" alt="VillaDeLeyva" src="villa.jpg"/>
-            </a-assets>
             <a-sky src="#a3" id="cielo"></a-sky>
+            <a-image src="#a3" onclick="show(event)"></a-image>
             <a-camera>
                 <a-cursor color="white"></a-cursor>
             </a-camera>
     </a-scene>
-    <a-image src="#a2" onclick="show(event)"></a-image>
-    <a-image src="#a3" onclick="show(event)"></a-image>
+    
   </body>
 </html>
